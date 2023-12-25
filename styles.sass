@@ -1,0 +1,62 @@
+body
+    background: url('img/bg.jpg')
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+
+    .accordion
+        width: 65%
+        padding: 30px
+        border-radius: 30px
+        background-color: #fff
+
+
+        h2
+            font-size: 2em
+            font-weight: bold
+            margin-bottom: 1em
+            text-align: center
+        
+        .accordion-content
+
+            .question
+                padding: 18px 0
+                font-size: 22px
+                cursor: pointer
+                border-bottom: 1px solid
+                color: #000
+                position: relative
+            
+            
+            .question::after
+                content: '+'
+                font-weight: bold
+                position: absolute
+                right: -5px
+            .answer
+                padding-top: 15px
+                font-size: 22px
+                line-height: 1.5em
+                width: 100%
+                height: 0px
+                overflow: hidden
+                transition: .5s
+
+        .accordion-content.active
+
+            .answer
+                height: 150px
+            
+            .question
+                font-size: 18px
+                transition: .5s
+            .question::after
+                content: '-'
+                font-size: 1.5em
+                transition: .5s
+
+        
